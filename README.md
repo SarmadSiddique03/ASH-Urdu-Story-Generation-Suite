@@ -46,7 +46,7 @@ Combines semantic retrieval with **Gemini 2.5 Flash experimental** for high-qual
 - 
 ![Generated Story](./assets/screenshots/RAG.jpg)
 
-### 4. 🎞️ Static Video Generation Module (Colab)
+### 4. 🎞️ Static Video Generation Module
 Converts Urdu stories into narrated animated videos.
 
 - Parses stories into scene descriptions using Gemini.
@@ -61,7 +61,7 @@ Converts Urdu stories into narrated animated videos.
 > - Copy that ngrok URL into `Static-A.ipynb` and run it.
 > - The final ngrok URL from Static-A is then used in the backend.
 
-### 5. 🌀 Fluid Video Generation Module (Colab & Scalable)
+### 5. 🌀 Fluid Video Generation Module
 Creates dynamic videos from a single prompt, combining narration, visuals, and background music.
 
 - Parses prompt and generates image/music descriptions using Gemini.
