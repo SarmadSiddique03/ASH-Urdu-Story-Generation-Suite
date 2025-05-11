@@ -35,7 +35,7 @@ Generates Urdu stories using a **finetuned LLaMA 3.2 8B** model.
 - Hosted on Colab with ngrok tunneling.
 - The ngrok URL must be added to the backend config for story generation.
 
-![Generated Story](./assets/screenshots/finetunned.jpg)
+![Generated Story](./assets/screenshots/Finetunned.jpg)
 
 ### 3. 🔎 RAG-based Story Generation Module
 Combines semantic retrieval with **Gemini 2.5 Flash experimental** for high-quality Urdu stories.
