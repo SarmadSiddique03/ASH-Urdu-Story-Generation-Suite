@@ -16,9 +16,17 @@ A responsive React.js web application that allows users to:
 - Interact with an intelligent chatbot.
 - Access generated videos and chatbot responses.
 
+This is where users lands on startup.
+
+![Homepage](./assets/screenshots/exploreASH.png)
+
+Information about each of the model in the suite.
+
+![Explore ASH](./assets/screenshots/home.png)
+
 This is where users input prompts to generate stories or videos.
 
-![Homepage](./assets/screenshots/home.png)
+![Prompt Input](./assets/screenshots/input.jpg)
 
 ### 2. ✍️ Finetuned Story Generation Module
 Generates Urdu stories using a **finetuned LLaMA 3.2 8B** model.
@@ -27,12 +35,16 @@ Generates Urdu stories using a **finetuned LLaMA 3.2 8B** model.
 - Hosted on Colab with ngrok tunneling.
 - The ngrok URL must be added to the backend config for story generation.
 
+![Generated Story](./assets/screenshots/finetunned.jpg)
+
 ### 3. 🔎 RAG-based Story Generation Module
 Combines semantic retrieval with **Gemini 2.5 Flash experimental** for high-quality Urdu stories.
 
 - Fetches relevant stories from a local database.
 - Analyzes writing styles and context.
 - Generates a new Urdu story informed by the retrieved content.
+- 
+![Generated Story](./assets/screenshots/RAG.jpg)
 
 ### 4. 🎞️ Static Video Generation Module (Colab)
 Converts Urdu stories into narrated animated videos.
@@ -41,6 +53,8 @@ Converts Urdu stories into narrated animated videos.
 - Generates visuals with **Stable Diffusion XL**.
 - Adds narration with **Google Text-to-Speech (Urdu)**.
 - Combines everything into a final stitched video.
+
+![Static](./assets/screenshots/StaticVideo.jpg)
 
 > **How to Run:**
 > - Run the `Static-B.ipynb` notebook (on a Colab T4 GPU). It will display an ngrok URL (port exposed).
@@ -56,8 +70,10 @@ Creates dynamic videos from a single prompt, combining narration, visuals, and b
 - Uses **MusicGen Small** for background music.
 - Combines assets into a video with narration.
 
+![Fluid Video Output](./assets/screenshots/FluidVideo.jpg)
+
 > **How to Run:**
-> - Launch up to 5 Colab notebooks for `Fluid-B.ipynb` (scalable workers). Each displays its ngrok URL.
+> - Launch up to N Colab notebooks for `Fluid-B.ipynb` (scalable workers). Each displays its ngrok URL.
 > - Copy all worker URLs into `Fluid-A.ipynb` and run it (also on Colab with ngrok).
 > - Use the final Fluid-A ngrok URL in the backend for endpoint communication.
 
@@ -68,6 +84,8 @@ A bilingual chatbot (Urdu/English) trained to answer questions about Urdu litera
 - Performs real-time web search using DuckDuckGo Search API when needed.
 - Powered by Gemini for intelligent, contextual answers.
 
+  ![Chatbot Response](./assets/screenshots/chatbot.jpg)
+
 ---
 
 ## 🧠 Tech Stack
@@ -76,13 +94,19 @@ A bilingual chatbot (Urdu/English) trained to answer questions about Urdu litera
 |---------------|--------------------|
 | Frontend      | React.js |
 | Backend       | FastAPI |
-| AI Models     | LLaMA 3.2 8B, Gemini 2.5 Flash, Stable Diffusion XL, MusicGen |
+| AI Models     | LLaMA 3.2 8B, Gemini 2.5 Flash, Stable Diffusion XL, Stable-video-diffusion-img2vid-xt MusicGen |
 | TTS           | Google Text-to-Speech (Urdu) |
-| Hosting       | Hugging Face Spaces, Google Colab (T4 GPUs), ngrok |
+| Hosting       | Google Colab (T4 GPUs), ngrok |
 | Database      | MongoDB |
 | Tools         | Git, Python, Colab, LangChain, Ngrok |
 
 ---
+## 🙌 Team Members
+
+- [Sarmad Siddique](https://github.com/SarmadSiddique03)
+- [Ansab Sultan](https://github.com/Ansab-Sultan)
+- [Hooria Ajmal](https://github.com/hooriaajmal)
+
 
 ## ⚙️ Setup & Running Tips
 
@@ -91,8 +115,6 @@ A bilingual chatbot (Urdu/English) trained to answer questions about Urdu litera
 git clone https://github.com/sarmad003/ASH-Urdu-Story-Generation-Suite.git
 cd ASH-Urdu-Story-Generation-Suite
 
-# Install dependencies for the backend
-pip install -r requirements.txt
-
 # Start the backend server
+cd backend
 uvicorn main:app --reload
