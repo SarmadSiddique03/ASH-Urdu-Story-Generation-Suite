@@ -1,0 +1,82 @@
+/* src/components/newPrompt/newPrompt.css */
+
+/* ─── buffer at bottom of chat thread ──────────────────────────────────────────── */
+.endChat {
+  height: 120px;    /* adjust this to match your form's total height */
+  flex-shrink: 0;   /* prevent collapsing in flex layouts */
+}
+
+.message.warning {
+  color: #ececec;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.newForm {
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  background-color: #2c2937;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  right: 23%;
+}
+
+.newForm input {
+  flex: 1;
+  padding: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #ececec;
+  direction: rtl;
+  text-align: right;
+}
+
+.newForm button,
+.newForm label {
+  border-radius: 50%;
+  background-color: #605e68;
+  border: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+.newForm button img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Download button */
+.download-btn {
+  margin: 16px auto 8px;
+  display: block;
+  background-color: #1f2937;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+.download-btn:hover {
+  background-color: #111827;
+}
