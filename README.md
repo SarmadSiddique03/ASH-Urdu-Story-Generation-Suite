@@ -18,11 +18,11 @@ A responsive React.js web application that allows users to:
 
 This is where users lands on startup.
 
-![Homepage](./assets/screenshots/exploreASH.png)
+![Homepage](./assets/screenshots/home.png)
 
 Information about each of the model in the suite.
 
-![Explore ASH](./assets/screenshots/home.png)
+![Explore ASH](./assets/screenshots/exploreASH.png)
 
 This is where users input prompts to generate stories or videos.
 
