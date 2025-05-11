@@ -81,7 +81,7 @@ Creates dynamic videos from a single prompt, combining narration, visuals, and b
 A bilingual chatbot (Urdu/English) trained to answer questions about Urdu literature and history.
 
 - Maintains session context.
-- Performs real-time web search using DuckDuckGo Search API when needed.
+- Performs real-time web search using DuckDuckGo Search API.
 - Powered by Gemini for intelligent, contextual answers.
 
   ![Chatbot Response](./assets/screenshots/chatbot.jpg)
