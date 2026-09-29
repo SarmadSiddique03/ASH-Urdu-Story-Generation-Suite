@@ -118,6 +118,7 @@ Because our custom-curated dataset focused on intricate, complex Urdu literary p
 Given strict project execution timelines, our custom-curated Urdu storytelling dataset remained constrained in size, which bounded the generalization performance of the finetuned open-weight **LLaMA 3.2 8B** variant. 
 
 Consequently, this module serves as an active research benchmark. To ensure a production-ready user experience, the suite implements a hybrid pipeline: the **RAG-based module** (powered by Gemini) acts as our high-fidelity, stylistically informed production baseline, while the **finetuned LLaMA pipeline** establishes critical exploratory groundwork for future tokenization and alignment research in low-resource computational linguistics.
+
 ---
 
 ## 🙌 Team Members
