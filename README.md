@@ -101,6 +101,25 @@ A bilingual chatbot (Urdu/English) trained to answer questions about Urdu litera
 | Tools         | Git, Python, Colab, LangChain, Ngrok |
 
 ---
+
+## 🔬 Research Methodology, Metrics & Architecture Insights
+
+### 1. Decentralized Compute Strategy (Proof of Concept)
+Due to localized consumer-grade hardware constraints and the high VRAM demands of running state-of-the-art multi-modal models (Stable Diffusion XL, Stable Video Diffusion, and MusicGen) simultaneously, this system was designed to simulate a distributed cluster environment. 
+
+Instead of relying on an expensive, centralized datacenter GPU, we engineered a scalable proof-of-concept framework. It orchestrates and pipelines heavy generation tasks across multiple isolated, lower-VRAM nodes (simulated via Google Colab T4 instances) communicating securely over tunneled endpoints via `ngrok`. This demonstrates a viable, cost-effective architectural design for community-driven AI deployment when centralized High-Performance Computing (HPC) infrastructures are unavailable.
+
+### 2. Evaluation Metrics & The Creative Narrative Dilemma
+While traditional automated n-gram overlap metrics like **BLEU** and **ROUGE** were calculated during the initial training phases, they were intentionally discounted for final evaluation. In long-form narrative text generation, a low BLEU score does not inherently imply low quality. Conversely, high BLEU/ROUGE scores strongly correlate with overfitting and verbatim text memorization rather than stylistic fluidness and creative plot progression. 
+
+Because our custom-curated dataset focused on intricate, complex Urdu literary prose, evaluation was shifted toward qualitative, human-in-the-loop scoring for plot coherence, thematic consistency, and grammatical syntax. This approach actively mitigated the repetitive vocabulary trap common in low-resource language generation.
+
+### 3. Low-Resource Language LLM Benchmarking
+Given strict project execution timelines, our custom-curated Urdu storytelling dataset remained constrained in size, which bounded the generalization performance of the finetuned open-weight **LLaMA 3.2 8B** variant. 
+
+Consequently, this module serves as an active research benchmark. To ensure a production-ready user experience, the suite implements a hybrid pipeline: the **RAG-based module** (powered by Gemini) acts as our high-fidelity, stylistically informed production baseline, while the **finetuned LLaMA pipeline** establishes critical exploratory groundwork for future tokenization and alignment research in low-resource computational linguistics.
+---
+
 ## 🙌 Team Members
 
 - [Sarmad Siddique](https://github.com/SarmadSiddique03)
